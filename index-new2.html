@@ -5,17 +5,28 @@
     <style>
         .wrapper{
             display: grid;
-            /*grid-template-columns: 1fr 2fr 1fr;*/
+
+            /* Recommand to use fr over % or px.
+               The % will get into problem of padding and margin nesting because padding*2 + margin*2 + original length = actual length */
+            /*grid-template-columns: 1fr 1fr 1fr;*/
+            grid-template-columns: repeat(3, 1fr);  /* This is the same as above */
+
+            /* Other examples */
+            /*grid-template-columns: 1fr 2fr 1fr;*/ /* To make the second column bigger */
             /*grid-template-columns: repeat(4, 1fr 2fr);*/
-            grid-template-columns: repeat(3, 1fr);
+
             grid-gap: 1em;
-            /*grid-auto-rows: 100px;*/
-            grid-auto-rows: minmax(100px, auto);
+
+            /*grid-auto-rows: 100px;*/ /* Fixed height for each row */
+            grid-auto-rows: minmax(100px, auto);    /* Specify the minimum is 100px, but not maximum. The cell can stretch as much as it needs. And if one cell in a row stretch the height because of its content, all the cells in that rows stretch with it */
         }
         .nested{
-            display: grid;
+            display: grid; /* grid inside a grid cell */
             grid-template-columns: repeat(3, 1fr);
+
+            /* Let's say if you only have 3 nested cell and if you don't have grid-auto-rows, the height of the cells to stretch to the full height of the row */
             grid-auto-rows: 70px;
+
             grid-gap: 1em;
 
         }
@@ -38,7 +49,7 @@
             Lorem ipsum dolor sit.
         </div>
         <div>
-            First listed on 27 July, this house has been on Domain for 8 days. It was last sold in 1997 and 28 similar properties to this have recently been sold in Camberwell. The median price for a 5 bedroom house in this suburb is currently $2,650,000, with the median rent being $1,098 / week. There are currently 10 properties for sale in Camberwell. For more information on this property, contact RT Edgar Toorak.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur cum dignissimos dolor, doloremque ea eos facere fugiat, ipsam maiores modi nam nesciunt nisi nobis non optio perferendis perspiciatis placeat quasi quia quis quod ratione repellat veritatis voluptate. Eius, quibusdam.
         </div>
         <div class="nested">
             <div>Lorem</div>
@@ -46,9 +57,11 @@
             <div>Lorem</div>
             <div>Lorem</div>
             <div>Lorem</div>
-            <div>Lorem</div>            <div>Lorem</div>
             <div>Lorem</div>
-            <div>Lorem</div>        </div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+        </div>
         <div>
             Lorem ipsum dolor sit.
         </div>
