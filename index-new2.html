@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Grids</title>
+    <style>
+        .wrapper{
+            display: grid;
+            /*grid-template-columns: 1fr 2fr 1fr;*/
+            /*grid-template-columns: repeat(4, 1fr 2fr);*/
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1em;
+            /*grid-auto-rows: 100px;*/
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .nested{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 70px;
+            grid-gap: 1em;
+
+        }
+        .wrapper > div{
+            background: #eee;
+            padding: 1em;
+        }
+        .wrapper > div:nth-child(odd){
+            background: #ddd;
+        }
+        .nested > div{
+            border: #333 1px solid;
+            padding:1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            First listed on 27 July, this house has been on Domain for 8 days. It was last sold in 1997 and 28 similar properties to this have recently been sold in Camberwell. The median price for a 5 bedroom house in this suburb is currently $2,650,000, with the median rent being $1,098 / week. There are currently 10 properties for sale in Camberwell. For more information on this property, contact RT Edgar Toorak.
+        </div>
+        <div class="nested">
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>            <div>Lorem</div>
+            <div>Lorem</div>
+            <div>Lorem</div>        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit.
+        </div>
+    </div>
+</body>
+</html>

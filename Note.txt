@@ -1,0 +1,39 @@
+CSS Grid Layout Crash Course
+https://www.youtube.com/watch?v=jV8B24rSN5o
+
+###################################################################################
+
+C:\react\cssgrid>git init
+Initialized empty Git repository in C:/react/cssgrid/.git/
+
+
+
+
+
+
+The one with the "new" in the file name are the ones created by myself.
+
+At 5:03. Need to make sure you have the latest of chrome, e.g. Version 60.0.3112.90 so it supports grid. Otherwise you won't see it as two columns.
+
+            grid-template-columns: 70% 30%;
+            grid-template-columns: 40% 30% 30%;
+
+fr stands for fraction.
+Recommand to use fr over percentage and pixels
+
+
+Horizontal alignment:
+justify-items: stretch;     Can be start, center, end, stretch(default).
+
+Vertical alignment:
+align-items: start;     Can be start, center, end, stretch(default).
+
+grid-column: 1/3;
+means box1 will cover from vertical line1 to vertical line3 (incolumns), refers to "CSS Grids blackIsHorizontalLineNo greyIsVerticalLineNo.png". And it will knock off box2
+same concept for grid-row: 1/3;
+
+grid-column: 3;
+means box2 the starting vertical line will be line3
+
+grid can overlap each other, look at box1 and box4
+
