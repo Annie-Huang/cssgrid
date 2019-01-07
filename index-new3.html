@@ -6,10 +6,21 @@
         .wrapper{
             display: grid;
             grid-template-columns: 1fr 2fr 1fr;
-            grid-auto-rows: minmax(100px, auto);
+            grid-auto-rows: minmax(100px, auto); /* minimum 100px and but stretch out whatever it likes */
             grid-gap: 1em;
-            justify-items: stretch;
-            align-items: stretch;
+
+
+            /* Move item from left to right of the cell*/
+            /*justify-items: start;*/
+            /*justify-items: center;*/
+            /*justify-items: end;*/
+            justify-items: stretch; /* default */
+
+            /* Move item from top to bottom of the cell*/
+            /*align-items: start;*/
+            /*align-items: center;*/
+            /*align-items: end;*/
+            align-items: stretch; /* default */
         }
         .wrapper > div{
             background: #eee;
