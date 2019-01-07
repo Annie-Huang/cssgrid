@@ -6,9 +6,20 @@ https://www.youtube.com/watch?v=jV8B24rSN5o
 C:\react\cssgrid>git init
 Initialized empty Git repository in C:/react/cssgrid/.git/
 
+Annie@Annie-PC MINGW32 /c/react/cssgrid (master)
+$ git remote add origin git@github.com:Annie-Huang/cssgrid.git
+
+Annie@Annie-PC MINGW32 /c/react/cssgrid (master)
+$ git add .
+
+Annie@Annie-PC MINGW32 /c/react/cssgrid (master)
+$ git commit .
+
+Annie@Annie-PC MINGW32 /c/react/cssgrid (master)
+$ git push -u origin master
 
 
-
+####################################################################################
 
 
 The one with the "new" in the file name are the ones created by myself.
